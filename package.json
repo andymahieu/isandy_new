@@ -1,0 +1,30 @@
+{
+  "name": "isandy-website",
+  "version": "1.0.0",
+  "description": "Modern website for Andy Mahieu (isandy.be)",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve . --live",
+    "build": "echo 'No build step required for static site'",
+    "test": "echo 'No tests specified'",
+    "deploy": "echo 'Deploy to your hosting service'"
+  },
+  "keywords": [
+    "website",
+    "portfolio",
+    "modern",
+    "responsive",
+    "vanilla-js"
+  ],
+  "author": "Andy Mahieu",
+  "license": "Private",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
