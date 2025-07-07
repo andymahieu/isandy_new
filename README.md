@@ -20,6 +20,7 @@ A modern, fast, and engaging website for Andy Mahieu (isandy.be) built with vani
 - Vanilla JavaScript (ES6+)
 - Service Worker for PWA capabilities
 - Google Fonts (Inter)
+- Jest (Testing Framework)
 
 ## Structure
 
@@ -27,9 +28,15 @@ A modern, fast, and engaging website for Andy Mahieu (isandy.be) built with vani
 ├── index.html          # Main HTML file
 ├── styles.css          # All CSS styles
 ├── script.js           # JavaScript functionality
-├── sw.js              # Service Worker
-├── favicon.svg        # Website icon
-└── README.md          # This file
+├── sw.js               # Service Worker
+├── favicon.svg         # Website icon
+├── tests/              # Test files
+│   ├── unit/           # Unit tests
+│   └── mocks/          # Test mocks
+├── jest.config.js      # Jest configuration
+├── jest.setup.js       # Jest setup
+├── package.json        # Project configuration
+└── README.md           # This file
 ```
 
 ## Key Improvements Over Original Site
@@ -55,13 +62,34 @@ A modern, fast, and engaging website for Andy Mahieu (isandy.be) built with vani
 To run locally:
 
 1. Clone the repository
-2. Open `index.html` in a web browser
-3. For development with live reload, use a local server:
+2. Install dependencies:
    ```bash
+   npm install
+   ```
+3. Open `index.html` in a web browser or use a local server:
+   ```bash
+   npm run dev
+   # or
    npx serve .
    # or
    python -m http.server 8000
    ```
+
+### Testing
+
+The project uses Jest for unit testing. To run the tests:
+
+```bash
+npm test
+```
+
+The tests cover:
+- Form validation
+- Email validation
+- Notification system
+- Performance utilities (debounce and throttle)
+- Service worker registration
+- Resource preloading
 
 ## Deployment
 
@@ -106,6 +134,23 @@ Modify `styles.css` for design changes. The CSS is organized by sections for eas
 - Service Worker for caching
 - Preloaded critical resources
 - Debounced scroll and resize events
+
+## Testing
+
+The project includes comprehensive unit tests for key functionality:
+
+- **Utility Functions**: Tests for email validation, form validation, and notification icons
+- **Performance Utilities**: Tests for debounce and throttle functions
+- **Service Worker**: Tests for service worker registration and error handling
+- **Resource Preloading**: Tests for resource preloading functionality
+
+To run the tests:
+
+```bash
+npm test
+```
+
+To add more tests, create new test files in the `tests/unit/` directory.
 
 ## Contact Form
 

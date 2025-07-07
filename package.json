@@ -7,7 +7,7 @@
     "start": "serve .",
     "dev": "serve . --live",
     "build": "echo 'No build step required for static site'",
-    "test": "echo 'No tests specified'",
+    "test": "jest",
     "deploy": "echo 'Deploy to your hosting service'"
   },
   "keywords": [
@@ -20,6 +20,10 @@
   "author": "Andy Mahieu",
   "license": "Private",
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "jest": "^30.0.4",
+    "jest-environment-jsdom": "^30.0.4",
     "serve": "^14.2.1"
   },
   "browserslist": [

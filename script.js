@@ -241,6 +241,17 @@ function getNotificationIcon(type) {
     }
 }
 
+// Make functions available for testing in Node.js environment
+if (typeof window !== 'undefined') {
+    window.isValidEmail = isValidEmail;
+    window.validateForm = validateForm;
+    window.getNotificationIcon = getNotificationIcon;
+    window.showNotification = showNotification;
+    window.debounce = debounce;
+    window.throttle = throttle;
+    window.preloadResources = preloadResources;
+}
+
 // Initialize animations
 function initAnimations() {
     // Add CSS for animation classes
